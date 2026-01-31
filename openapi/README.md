@@ -309,13 +309,49 @@ All URIs are relative to *https://api.contabo.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DNSApi* | [**BulkDeleteDnsZoneRecords**](docs/DNSApi.md#bulkdeletednszonerecords) | **Delete** /v1/dns/zones/{zoneName}/records/bulk | Bulk delete DNS zone records
+*DNSApi* | [**CreateDnsZone**](docs/DNSApi.md#creatednszone) | **Post** /v1/dns/zones | Create DNS zone
+*DNSApi* | [**CreateDnsZoneRecord**](docs/DNSApi.md#creatednszonerecord) | **Post** /v1/dns/zones/{zoneName}/records | Create DNS zone record
+*DNSApi* | [**CreatePtrRecord**](docs/DNSApi.md#createptrrecord) | **Post** /v1/dns/ptrs | Create a new PTR Record using ip address
+*DNSApi* | [**DeleteDnsZone**](docs/DNSApi.md#deletednszone) | **Delete** /v1/dns/zones/{zoneName} | Delete a DNS zone.
+*DNSApi* | [**DeleteDnsZoneRecord**](docs/DNSApi.md#deletednszonerecord) | **Delete** /v1/dns/zones/{zoneName}/records/{recordId} | Delete a DNS zone record
+*DNSApi* | [**DeletePtrRecord**](docs/DNSApi.md#deleteptrrecord) | **Delete** /v1/dns/ptrs/{ipAddress} | Delete a PTR Record using ip address
+*DNSApi* | [**RetrieveDnsZone**](docs/DNSApi.md#retrievednszone) | **Get** /v1/dns/zones/{zoneName} | Retrieve a DNS Zone by zone name
+*DNSApi* | [**RetrieveDnsZoneRecordsList**](docs/DNSApi.md#retrievednszonerecordslist) | **Get** /v1/dns/zones/{zoneName}/records | List a DNS Zone&#39;s records
+*DNSApi* | [**RetrieveDnsZonesList**](docs/DNSApi.md#retrievednszoneslist) | **Get** /v1/dns/zones | List DNS zones
+*DNSApi* | [**RetrievePtrRecord**](docs/DNSApi.md#retrieveptrrecord) | **Get** /v1/dns/ptrs/{ipAddress} | Retrieve a PTR Record by ip address
+*DNSApi* | [**RetrievePtrRecordsList**](docs/DNSApi.md#retrieveptrrecordslist) | **Get** /v1/dns/ptrs | List PTR records
+*DNSApi* | [**UpdateDnsZoneRecord**](docs/DNSApi.md#updatednszonerecord) | **Patch** /v1/dns/zones/{zoneName}/records/{recordId} | Update DNS zone record
+*DNSApi* | [**UpdatePtrRecord**](docs/DNSApi.md#updateptrrecord) | **Put** /v1/dns/ptrs/{ipAddress} | Edit a PTR Record by ip address
+*DNSAuditsApi* | [**RetrieveImageAuditsList**](docs/DNSAuditsApi.md#retrieveimageauditslist) | **Get** /v1/dns/zones/audits | List history about your DNS Zones (audit)
+*DNSAuditsApi* | [**RetrieveRecordAuditsList**](docs/DNSAuditsApi.md#retrieverecordauditslist) | **Get** /v1/dns/records/audits | List history about your DNS Records (audit)
+*DomainsApi* | [**CancelDomain**](docs/DomainsApi.md#canceldomain) | **Post** /v1/domains/{domain}/cancel | Cancel a specific domain
+*DomainsApi* | [**ConfirmDomainTransferOut**](docs/DomainsApi.md#confirmdomaintransferout) | **Post** /v1/domains/{domain}/transfer-out | Confirm transfer out for a domain
+*DomainsApi* | [**ConfirmDomainTransferOut_0**](docs/DomainsApi.md#confirmdomaintransferout_0) | **Post** /v1/domains/{domain}/transfer-out | Confirm transfer out for a domain
+*DomainsApi* | [**GetAuthCode**](docs/DomainsApi.md#getauthcode) | **Post** /v1/domains/{domain}/generate-auth-code | Get auth code for a domain
+*DomainsApi* | [**ListDomains**](docs/DomainsApi.md#listdomains) | **Get** /v1/domains | List all domains
+*DomainsApi* | [**OrderDomain**](docs/DomainsApi.md#orderdomain) | **Post** /v1/domains | Create or transfer a domain
+*DomainsApi* | [**RetrieveDomain**](docs/DomainsApi.md#retrievedomain) | **Get** /v1/domains/{domain} | List specific domain
+*DomainsApi* | [**RevokeCancelDomain**](docs/DomainsApi.md#revokecanceldomain) | **Post** /v1/domains/{domain}/revoke-cancellation | Revoke cancellation for a specific domain
+*DomainsApi* | [**RevokeDomainTransferOut**](docs/DomainsApi.md#revokedomaintransferout) | **Delete** /v1/domains/{domain}/transfer-out | Revoke transfer out for a domain
+*DomainsApi* | [**RevokeDomainTransferOut_0**](docs/DomainsApi.md#revokedomaintransferout_0) | **Delete** /v1/domains/{domain}/transfer-out | Revoke transfer out for a domain
+*DomainsApi* | [**UpdateDomain**](docs/DomainsApi.md#updatedomain) | **Patch** /v1/domains/{domain} | Update a specific domain
+*DomainsApi* | [**ValidateDomainAvailability**](docs/DomainsApi.md#validatedomainavailability) | **Post** /v1/registries-domains/{domain}/check-availability | Check domain availablility
+*DomainsAuditsApi* | [**RetrieveDomainsAuditsList**](docs/DomainsAuditsApi.md#retrievedomainsauditslist) | **Get** /v1/domains/audits | List history about your Domains (audit)
+*HandlesApi* | [**CreateHandle**](docs/HandlesApi.md#createhandle) | **Post** /v1/domains/handles | Create specific handle
+*HandlesApi* | [**ListHandles**](docs/HandlesApi.md#listhandles) | **Get** /v1/domains/handles | List all handles
+*HandlesApi* | [**RemoveHandle**](docs/HandlesApi.md#removehandle) | **Delete** /v1/domains/handles/{handleId} | Remove specific handle
+*HandlesApi* | [**RetrieveHandle**](docs/HandlesApi.md#retrievehandle) | **Get** /v1/domains/handles/{handleId} | Get specific handle
+*HandlesApi* | [**SetDefaultHandle**](docs/HandlesApi.md#setdefaulthandle) | **Patch** /v1/domains/handles/{handleId}/default | Set default handle
+*HandlesApi* | [**UpdateHandle**](docs/HandlesApi.md#updatehandle) | **Put** /v1/domains/handles/{handleId} | Update specific handle
+*HandlesAuditsApi* | [**RetrieveHandlesAuditsList**](docs/HandlesAuditsApi.md#retrievehandlesauditslist) | **Get** /v1/domains/handles/audits | List history about your handles (audit)
 *ImagesApi* | [**CreateCustomImage**](docs/ImagesApi.md#createcustomimage) | **Post** /v1/compute/images | Provide a custom image
 *ImagesApi* | [**DeleteImage**](docs/ImagesApi.md#deleteimage) | **Delete** /v1/compute/images/{imageId} | Delete an uploaded custom image by its id
 *ImagesApi* | [**RetrieveCustomImagesStats**](docs/ImagesApi.md#retrievecustomimagesstats) | **Get** /v1/compute/images/stats | List statistics regarding the customer&#39;s custom images
 *ImagesApi* | [**RetrieveImage**](docs/ImagesApi.md#retrieveimage) | **Get** /v1/compute/images/{imageId} | Get details about a specific image by its id
 *ImagesApi* | [**RetrieveImageList**](docs/ImagesApi.md#retrieveimagelist) | **Get** /v1/compute/images | List available standard and custom images
 *ImagesApi* | [**UpdateImage**](docs/ImagesApi.md#updateimage) | **Patch** /v1/compute/images/{imageId} | Update custom image name by its id
-*ImagesAuditsApi* | [**RetrieveImageAuditsList**](docs/ImagesAuditsApi.md#retrieveimageauditslist) | **Get** /v1/compute/images/audits | List history about your custom images (audit)
+*ImagesAuditsApi* | [**RetrieveImageAuditsList1**](docs/ImagesAuditsApi.md#retrieveimageauditslist1) | **Get** /v1/compute/images/audits | List history about your custom images (audit)
 *InstanceActionsApi* | [**Rescue**](docs/InstanceActionsApi.md#rescue) | **Post** /v1/compute/instances/{instanceId}/actions/rescue | Rescue a compute instance / resource identified by its id
 *InstanceActionsApi* | [**ResetPasswordAction**](docs/InstanceActionsApi.md#resetpasswordaction) | **Post** /v1/compute/instances/{instanceId}/actions/resetPassword | Reset password for a compute instance / resource referenced by an id
 *InstanceActionsApi* | [**Restart**](docs/InstanceActionsApi.md#restart) | **Post** /v1/compute/instances/{instanceId}/actions/restart | Restart a compute instance / resource identified by its id.
@@ -331,7 +367,6 @@ Class | Method | HTTP request | Description
 *InstancesApi* | [**RetrieveInstancesList**](docs/InstancesApi.md#retrieveinstanceslist) | **Get** /v1/compute/instances | List instances
 *InstancesApi* | [**UpgradeInstance**](docs/InstancesApi.md#upgradeinstance) | **Post** /v1/compute/instances/{instanceId}/upgrade | Upgrading instance capabilities
 *InstancesAuditsApi* | [**RetrieveInstancesAuditsList**](docs/InstancesAuditsApi.md#retrieveinstancesauditslist) | **Get** /v1/compute/instances/audits | List history about your instances (audit)
-*InternalApi* | [**CreateTicket**](docs/InternalApi.md#createticket) | **Post** /v1/create-ticket | Create a new support ticket
 *ObjectStoragesApi* | [**CancelObjectStorage**](docs/ObjectStoragesApi.md#cancelobjectstorage) | **Patch** /v1/object-storages/{objectStorageId}/cancel | Cancels the specified object storage at the next possible date
 *ObjectStoragesApi* | [**CreateObjectStorage**](docs/ObjectStoragesApi.md#createobjectstorage) | **Post** /v1/object-storages | Create a new object storage
 *ObjectStoragesApi* | [**RetrieveDataCenterList**](docs/ObjectStoragesApi.md#retrievedatacenterlist) | **Get** /v1/data-centers | List data centers
@@ -407,8 +442,13 @@ Class | Method | HTTP request | Description
  - [AddOnRequest](docs/AddOnRequest.md)
  - [AddOnResponse](docs/AddOnResponse.md)
  - [AdditionalIp](docs/AdditionalIp.md)
+ - [ApiBulkDeleteDnsZoneRecordsResponse](docs/ApiBulkDeleteDnsZoneRecordsResponse.md)
+ - [ApiDnsZoneRecordResponse](docs/ApiDnsZoneRecordResponse.md)
+ - [ApiDnsZoneResponse](docs/ApiDnsZoneResponse.md)
  - [ApiPermissionsResponse](docs/ApiPermissionsResponse.md)
+ - [ApiPtrRecordResponse](docs/ApiPtrRecordResponse.md)
  - [ApplicationConfig](docs/ApplicationConfig.md)
+ - [ApplicationMetaData](docs/ApplicationMetaData.md)
  - [ApplicationRequirements](docs/ApplicationRequirements.md)
  - [ApplicationResponse](docs/ApplicationResponse.md)
  - [AssignInstancePrivateNetworkResponse](docs/AssignInstancePrivateNetworkResponse.md)
@@ -418,12 +458,16 @@ Class | Method | HTTP request | Description
  - [AssignmentResponse](docs/AssignmentResponse.md)
  - [AutoScalingTypeRequest](docs/AutoScalingTypeRequest.md)
  - [AutoScalingTypeResponse](docs/AutoScalingTypeResponse.md)
+ - [BulkDeleteDnsZoneRecordsRequest](docs/BulkDeleteDnsZoneRecordsRequest.md)
+ - [BulkDeleteResultResponse](docs/BulkDeleteResultResponse.md)
+ - [CancelDomainRequest](docs/CancelDomainRequest.md)
  - [CancelInstanceRequest](docs/CancelInstanceRequest.md)
  - [CancelInstanceResponse](docs/CancelInstanceResponse.md)
  - [CancelInstanceResponseData](docs/CancelInstanceResponseData.md)
  - [CancelObjectStorageRequest](docs/CancelObjectStorageRequest.md)
  - [CancelObjectStorageResponse](docs/CancelObjectStorageResponse.md)
  - [CancelObjectStorageResponseData](docs/CancelObjectStorageResponseData.md)
+ - [ChangedAuthCode](docs/ChangedAuthCode.md)
  - [ClientResponse](docs/ClientResponse.md)
  - [ClientSecretResponse](docs/ClientSecretResponse.md)
  - [CreateAssignmentResponse](docs/CreateAssignmentResponse.md)
@@ -431,6 +475,8 @@ Class | Method | HTTP request | Description
  - [CreateCustomImageRequest](docs/CreateCustomImageRequest.md)
  - [CreateCustomImageResponse](docs/CreateCustomImageResponse.md)
  - [CreateCustomImageResponseData](docs/CreateCustomImageResponseData.md)
+ - [CreateDnsZoneRecordRequest](docs/CreateDnsZoneRecordRequest.md)
+ - [CreateDnsZoneRequest](docs/CreateDnsZoneRequest.md)
  - [CreateInstanceAddons](docs/CreateInstanceAddons.md)
  - [CreateInstanceRequest](docs/CreateInstanceRequest.md)
  - [CreateInstanceResponse](docs/CreateInstanceResponse.md)
@@ -440,6 +486,7 @@ Class | Method | HTTP request | Description
  - [CreateObjectStorageResponseData](docs/CreateObjectStorageResponseData.md)
  - [CreatePrivateNetworkRequest](docs/CreatePrivateNetworkRequest.md)
  - [CreatePrivateNetworkResponse](docs/CreatePrivateNetworkResponse.md)
+ - [CreatePtrRecordRequest](docs/CreatePtrRecordRequest.md)
  - [CreateRoleRequest](docs/CreateRoleRequest.md)
  - [CreateRoleResponse](docs/CreateRoleResponse.md)
  - [CreateRoleResponseData](docs/CreateRoleResponseData.md)
@@ -450,9 +497,6 @@ Class | Method | HTTP request | Description
  - [CreateTagRequest](docs/CreateTagRequest.md)
  - [CreateTagResponse](docs/CreateTagResponse.md)
  - [CreateTagResponseData](docs/CreateTagResponseData.md)
- - [CreateTicketRequest](docs/CreateTicketRequest.md)
- - [CreateTicketResponse](docs/CreateTicketResponse.md)
- - [CreateTicketResponseData](docs/CreateTicketResponseData.md)
  - [CreateUserRequest](docs/CreateUserRequest.md)
  - [CreateUserResponse](docs/CreateUserResponse.md)
  - [CreateUserResponseData](docs/CreateUserResponseData.md)
@@ -460,6 +504,23 @@ Class | Method | HTTP request | Description
  - [CustomImagesStatsResponse](docs/CustomImagesStatsResponse.md)
  - [CustomImagesStatsResponseData](docs/CustomImagesStatsResponseData.md)
  - [DataCenterResponse](docs/DataCenterResponse.md)
+ - [DnsZoneRecordResponse](docs/DnsZoneRecordResponse.md)
+ - [DnsZoneResponse](docs/DnsZoneResponse.md)
+ - [DomainAuditResponse](docs/DomainAuditResponse.md)
+ - [DomainAuditResponseData](docs/DomainAuditResponseData.md)
+ - [DomainAuthCodeRegenerateResponse](docs/DomainAuthCodeRegenerateResponse.md)
+ - [DomainAuthCodeResponse](docs/DomainAuthCodeResponse.md)
+ - [DomainCancel](docs/DomainCancel.md)
+ - [DomainCancelResponse](docs/DomainCancelResponse.md)
+ - [DomainCreateRequest](docs/DomainCreateRequest.md)
+ - [DomainCreateResponse](docs/DomainCreateResponse.md)
+ - [DomainDetails](docs/DomainDetails.md)
+ - [DomainFindResponse](docs/DomainFindResponse.md)
+ - [DomainHandles](docs/DomainHandles.md)
+ - [DomainPatchRequest](docs/DomainPatchRequest.md)
+ - [DomainPatchResponse](docs/DomainPatchResponse.md)
+ - [DomainResponse](docs/DomainResponse.md)
+ - [DomainsListResponse](docs/DomainsListResponse.md)
  - [ExtraStorageRequest](docs/ExtraStorageRequest.md)
  - [FindAssignmentResponse](docs/FindAssignmentResponse.md)
  - [FindClientResponse](docs/FindClientResponse.md)
@@ -478,6 +539,18 @@ Class | Method | HTTP request | Description
  - [FindVncResponse](docs/FindVncResponse.md)
  - [FirewallingUpgradeRequest](docs/FirewallingUpgradeRequest.md)
  - [GenerateClientSecretResponse](docs/GenerateClientSecretResponse.md)
+ - [HandleAddress](docs/HandleAddress.md)
+ - [HandleAuditResponse](docs/HandleAuditResponse.md)
+ - [HandleAuditResponseData](docs/HandleAuditResponseData.md)
+ - [HandleBirthInfo](docs/HandleBirthInfo.md)
+ - [HandleCreateRequest](docs/HandleCreateRequest.md)
+ - [HandleCreateResponse](docs/HandleCreateResponse.md)
+ - [HandleFindResponse](docs/HandleFindResponse.md)
+ - [HandleListResponse](docs/HandleListResponse.md)
+ - [HandlePatchRequest](docs/HandlePatchRequest.md)
+ - [HandlePatchResponse](docs/HandlePatchResponse.md)
+ - [HandlePhone](docs/HandlePhone.md)
+ - [HandleResponse](docs/HandleResponse.md)
  - [ImageAuditResponse](docs/ImageAuditResponse.md)
  - [ImageAuditResponseData](docs/ImageAuditResponseData.md)
  - [ImageResponse](docs/ImageResponse.md)
@@ -514,6 +587,8 @@ Class | Method | HTTP request | Description
  - [ListAssignmentResponse](docs/ListAssignmentResponse.md)
  - [ListCredentialResponse](docs/ListCredentialResponse.md)
  - [ListDataCenterResponse](docs/ListDataCenterResponse.md)
+ - [ListDnsZoneRecordsResponse](docs/ListDnsZoneRecordsResponse.md)
+ - [ListDnsZonesResponse](docs/ListDnsZonesResponse.md)
  - [ListImageResponse](docs/ListImageResponse.md)
  - [ListImageResponseData](docs/ListImageResponseData.md)
  - [ListInstancesActionsAuditResponse](docs/ListInstancesActionsAuditResponse.md)
@@ -525,6 +600,7 @@ Class | Method | HTTP request | Description
  - [ListPrivateNetworkAuditResponse](docs/ListPrivateNetworkAuditResponse.md)
  - [ListPrivateNetworkResponse](docs/ListPrivateNetworkResponse.md)
  - [ListPrivateNetworkResponseData](docs/ListPrivateNetworkResponseData.md)
+ - [ListPtrRecordsResponse](docs/ListPtrRecordsResponse.md)
  - [ListRoleAuditResponse](docs/ListRoleAuditResponse.md)
  - [ListRoleResponse](docs/ListRoleResponse.md)
  - [ListSecretAuditResponse](docs/ListSecretAuditResponse.md)
@@ -539,6 +615,7 @@ Class | Method | HTTP request | Description
  - [ListVipResponse](docs/ListVipResponse.md)
  - [ListVipResponseData](docs/ListVipResponseData.md)
  - [MinimumRequirements](docs/MinimumRequirements.md)
+ - [Nameserver](docs/Nameserver.md)
  - [ObjectStorageAuditResponse](docs/ObjectStorageAuditResponse.md)
  - [ObjectStorageResponse](docs/ObjectStorageResponse.md)
  - [ObjectStoragesStatsResponse](docs/ObjectStoragesStatsResponse.md)
@@ -557,6 +634,9 @@ Class | Method | HTTP request | Description
  - [PrivateIpConfig](docs/PrivateIpConfig.md)
  - [PrivateNetworkAuditResponse](docs/PrivateNetworkAuditResponse.md)
  - [PrivateNetworkResponse](docs/PrivateNetworkResponse.md)
+ - [PtrRecordResponse](docs/PtrRecordResponse.md)
+ - [RecordAuditResponse](docs/RecordAuditResponse.md)
+ - [RecordAuditResponseData](docs/RecordAuditResponseData.md)
  - [ReinstallInstanceRequest](docs/ReinstallInstanceRequest.md)
  - [ReinstallInstanceResponse](docs/ReinstallInstanceResponse.md)
  - [ReinstallInstanceResponseData](docs/ReinstallInstanceResponseData.md)
@@ -567,6 +647,7 @@ Class | Method | HTTP request | Description
  - [SecretAuditResponse](docs/SecretAuditResponse.md)
  - [SecretResponse](docs/SecretResponse.md)
  - [SelfLinks](docs/SelfLinks.md)
+ - [SetDefaultHandleResponse](docs/SetDefaultHandleResponse.md)
  - [SnapshotResponse](docs/SnapshotResponse.md)
  - [SnapshotsAuditResponse](docs/SnapshotsAuditResponse.md)
  - [TagAssignmentSelfLinks](docs/TagAssignmentSelfLinks.md)
@@ -576,6 +657,8 @@ Class | Method | HTTP request | Description
  - [UpdateCustomImageRequest](docs/UpdateCustomImageRequest.md)
  - [UpdateCustomImageResponse](docs/UpdateCustomImageResponse.md)
  - [UpdateCustomImageResponseData](docs/UpdateCustomImageResponseData.md)
+ - [UpdateDnsZoneRecordRequest](docs/UpdateDnsZoneRecordRequest.md)
+ - [UpdatePtrRecordRequest](docs/UpdatePtrRecordRequest.md)
  - [UpdateRoleRequest](docs/UpdateRoleRequest.md)
  - [UpdateRoleResponse](docs/UpdateRoleResponse.md)
  - [UpdateSecretRequest](docs/UpdateSecretRequest.md)
@@ -597,6 +680,8 @@ Class | Method | HTTP request | Description
  - [VipAuditResponse](docs/VipAuditResponse.md)
  - [VipResponse](docs/VipResponse.md)
  - [VncResponse](docs/VncResponse.md)
+ - [ZoneAuditResponse](docs/ZoneAuditResponse.md)
+ - [ZoneAuditResponseData](docs/ZoneAuditResponseData.md)
 
 
 ## Documentation For Authorization

@@ -22,7 +22,7 @@ var historyCmd = &cobra.Command{
 	Example: `cntb history images --imageId 9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d`,
 	Run: func(cmd *cobra.Command, args []string) {
 		historyRequest := client.ApiClient().ImagesAuditsApi.
-			RetrieveImageAuditsList(context.Background()).
+			RetrieveImageAuditsList1(context.Background()).
 			XRequestId(uuid.NewV4().String()).
 			Page(contaboCmd.Page).
 			Size(contaboCmd.Size).

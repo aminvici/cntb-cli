@@ -194,7 +194,7 @@ func (r ApiCreateInstanceRequest) Execute() (CreateInstanceResponse, *_nethttp.R
 /*
 CreateInstance Create a new instance
 
-Create a new instance for your account with the provided parameters.         <table>           <tr><th>ProductId</th><th>Product</th><th>Disk Size</th></tr>           <tr><td>V91</td><td>VPS 10 NVMe</td><td>75 GB NVMe</td></tr>           <tr><td>V92</td><td>VPS 10 SSD</td><td>150 GB SSD</td></tr>          <tr><td>V93</td><td>VPS 10 Storage</td><td>300 GB SSD</td></tr>          <tr><td>V94</td><td>VPS 20 NVMe</td><td>100 GB NVMe</td></tr>           <tr><td>V95</td><td>VPS 20 SSD</td><td>200 GB SSD</td></tr>          <tr><td>V96</td><td>VPS 20 Storage</td><td>400 GB SSD</td></tr>           <tr><td>V97</td><td>VPS 30 NVMe</td><td>200 GB NVMe</td></tr>           <tr><td>V98</td><td>VPS 30 SSD</td><td>400 GB SSD</td></tr>          <tr><td>V99</td><td>VPS 30 Storage</td><td>1000 GB NVMe</td></tr>           <tr><td>V100</td><td>VPS 40 NVMe</td><td>250 GB NVMe</td></tr>           <tr><td>V101</td><td>VPS 40 SSD</td><td>500 GB SSD</td></tr>           <tr><td>V102</td><td>VPS 40 Storage</td><td>1200 GB NVMe</td></tr>           <tr><td>V103</td><td>VPS 50 NVMe</td><td>300 GB NVMe</td></tr>           <tr><td>V104</td><td>VPS 50 SSD</td><td>600 GB SSD</td></tr>           <tr><td>V105</td><td>VPS 50 Storage</td><td>1400 GB SSD</td></tr>           <tr><td>V106</td><td>VPS 60 NVMe</td><td>350 GB NVMe</td></tr>           <tr><td>V107</td><td>VPS 60 SSD</td><td>700 GB SSD</td></tr>           <tr><td>V68</td><td>VPS 4C NVMe</td><td>100 GB NVMe</td></tr>           <tr><td>V76</td><td>VPS 4C SSD</td><td>200 GB SSD</td></tr>          <tr><td>V85</td><td>VPS 4C Storage</td><td>600 GB NVMe</td></tr>           <tr><td>V69</td><td>VPS 6C NVMe</td><td>150 GB NVMe</td></tr>           <tr><td>V77</td><td>VPS 6C SSD</td><td>300 GB SSD</td></tr>          <tr><td>V86</td><td>VPS 6C Storage</td><td>1800 GB NVMe</td></tr>           <tr><td>V70</td><td>VPS 8C NVMe</td><td>200 GB NVMe</td></tr>           <tr><td>V78</td><td>VPS 8C SSD</td><td>400 GB SSD</td></tr>          <tr><td>V87</td><td>VPS 8C Storage</td><td>2400 GB NVMe</td></tr>           <tr><td>V71</td><td>VPS 10C NVMe</td><td>250 GB NVMe</td></tr>           <tr><td>V79</td><td>VPS 10C SSD</td><td>500 GB SSD</td></tr>           <tr><td>V88</td><td>VPS 10C Storage</td><td>3200 GB NVMe</td></tr>           <tr><td>V72</td><td>VPS 14C NVMe</td><td>300 GB NVMe</td></tr>           <tr><td>V80</td><td>VPS 14C SSD</td><td>600 GB SSD</td></tr>           <tr><td>V89</td><td>VPS 16C Storage</td><td>3600 GB SSD</td></tr>           <tr><td>V73</td><td>VPS 20C NVMe</td><td>400 GB NVMe</td></tr>           <tr><td>V81</td><td>VPS 20C SSD</td><td>800 GB SSD</td></tr>           <tr><td>V74</td><td>VPS 24C NVMe</td><td>600 GB NVMe</td></tr>           <tr><td>V83</td><td>VPS 24C SSD</td><td>1200 GB SSD</td></tr>           <tr><td>V8</td><td>VDS S</td><td>180 GB NVMe</td></tr>           <tr><td>V9</td><td>VDS M</td><td>240 GB NVMe</td></tr>           <tr><td>V10</td><td>VDS L</td><td>360 GB NVMe</td></tr>           <tr><td>V11</td><td>VDS XL</td><td>480 GB NVMe</td></tr>           <tr><td>V16</td><td>VDS XXL</td><td>720 GB NVMe</td></tr>           </table>
+Create a new instance for your account with the provided parameters.         <table>           <tr><th>ProductId</th><th>Product</th><th>Disk Size</th></tr>           <tr><td>V91</td><td>VPS 10 NVMe</td><td>75 GB NVMe</td></tr>           <tr><td>V92</td><td>VPS 10 SSD</td><td>150 GB SSD</td></tr>          <tr><td>V93</td><td>VPS 10 Storage</td><td>300 GB SSD</td></tr>          <tr><td>V94</td><td>VPS 20 NVMe</td><td>100 GB NVMe</td></tr>           <tr><td>V95</td><td>VPS 20 SSD</td><td>200 GB SSD</td></tr>          <tr><td>V96</td><td>VPS 20 Storage</td><td>400 GB SSD</td></tr>           <tr><td>V97</td><td>VPS 30 NVMe</td><td>200 GB NVMe</td></tr>           <tr><td>V98</td><td>VPS 30 SSD</td><td>400 GB SSD</td></tr>          <tr><td>V99</td><td>VPS 30 Storage</td><td>1000 GB NVMe</td></tr>           <tr><td>V100</td><td>VPS 40 NVMe</td><td>250 GB NVMe</td></tr>           <tr><td>V101</td><td>VPS 40 SSD</td><td>500 GB SSD</td></tr>           <tr><td>V102</td><td>VPS 40 Storage</td><td>1200 GB NVMe</td></tr>           <tr><td>V103</td><td>VPS 50 NVMe</td><td>300 GB NVMe</td></tr>           <tr><td>V104</td><td>VPS 50 SSD</td><td>600 GB SSD</td></tr>           <tr><td>V105</td><td>VPS 50 Storage</td><td>1400 GB SSD</td></tr>           <tr><td>V106</td><td>VPS 60 NVMe</td><td>350 GB NVMe</td></tr>           <tr><td>V107</td><td>VPS 60 SSD</td><td>700 GB SSD</td></tr>           <tr><td>V8</td><td>VDS S</td><td>180 GB NVMe</td></tr>           <tr><td>V9</td><td>VDS M</td><td>240 GB NVMe</td></tr>           <tr><td>V10</td><td>VDS L</td><td>360 GB NVMe</td></tr>           <tr><td>V11</td><td>VDS XL</td><td>480 GB NVMe</td></tr>           <tr><td>V16</td><td>VDS XXL</td><td>720 GB NVMe</td></tr>           </table>
 
  @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  @return ApiCreateInstanceRequest
@@ -710,6 +710,8 @@ type ApiRetrieveInstancesListRequest struct {
 	productTypes *string
 	ipConfig *bool
 	search *string
+	customerId *string
+	tenantId *string
 }
 
 // [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
@@ -796,6 +798,16 @@ func (r ApiRetrieveInstancesListRequest) IpConfig(ipConfig bool) ApiRetrieveInst
 // Full text search when listing the instances. Can be searched by &#x60;name&#x60;, &#x60;displayName&#x60;, &#x60;ipAddress&#x60;
 func (r ApiRetrieveInstancesListRequest) Search(search string) ApiRetrieveInstancesListRequest {
 	r.search = &search
+	return r
+}
+// Filter by customer ID
+func (r ApiRetrieveInstancesListRequest) CustomerId(customerId string) ApiRetrieveInstancesListRequest {
+	r.customerId = &customerId
+	return r
+}
+// Filter by tenant ID
+func (r ApiRetrieveInstancesListRequest) TenantId(tenantId string) ApiRetrieveInstancesListRequest {
+	r.tenantId = &tenantId
 	return r
 }
 
@@ -896,6 +908,12 @@ func (a *InstancesApiService) RetrieveInstancesListExecute(r ApiRetrieveInstance
 	}
 	if r.search != nil {
 		localVarQueryParams.Add("search", parameterToString(*r.search, ""))
+	}
+	if r.customerId != nil {
+		localVarQueryParams.Add("customerId", parameterToString(*r.customerId, ""))
+	}
+	if r.tenantId != nil {
+		localVarQueryParams.Add("tenantId", parameterToString(*r.tenantId, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -1,0 +1,10 @@
+./cancel.go
+./create.go
+./get.go
+./history.go
+./list.go
+./reinstall.go
+./resetPassword.go
+./update.go
+./upgrade.go
+./vars.go

@@ -23,17 +23,20 @@ type ApplicationConfig struct {
 	UserDataId string `json:"userDataId"`
 	// [Cloud-Init](https://cloud-init.io/) Config in order to customize during start of compute instance.
 	UserData string `json:"userData"`
+	// Metadata of the application configuration
+	MetaData ApplicationMetaData `json:"metaData"`
 }
 
 // NewApplicationConfig instantiates a new ApplicationConfig object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewApplicationConfig(imageId string, userDataId string, userData string) *ApplicationConfig {
+func NewApplicationConfig(imageId string, userDataId string, userData string, metaData ApplicationMetaData) *ApplicationConfig {
 	this := ApplicationConfig{}
 	this.ImageId = imageId
 	this.UserDataId = userDataId
 	this.UserData = userData
+	this.MetaData = metaData
 	return &this
 }
 
@@ -117,6 +120,30 @@ func (o *ApplicationConfig) SetUserData(v string) {
 	o.UserData = v
 }
 
+// GetMetaData returns the MetaData field value
+func (o *ApplicationConfig) GetMetaData() ApplicationMetaData {
+	if o == nil {
+		var ret ApplicationMetaData
+		return ret
+	}
+
+	return o.MetaData
+}
+
+// GetMetaDataOk returns a tuple with the MetaData field value
+// and a boolean to check if the value has been set.
+func (o *ApplicationConfig) GetMetaDataOk() (*ApplicationMetaData, bool) {
+	if o == nil  {
+		return nil, false
+	}
+	return &o.MetaData, true
+}
+
+// SetMetaData sets field value
+func (o *ApplicationConfig) SetMetaData(v ApplicationMetaData) {
+	o.MetaData = v
+}
+
 func (o ApplicationConfig) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if true {
@@ -127,6 +154,9 @@ func (o ApplicationConfig) MarshalJSON() ([]byte, error) {
 	}
 	if true {
 		toSerialize["userData"] = o.UserData
+	}
+	if true {
+		toSerialize["metaData"] = o.MetaData
 	}
 	return json.Marshal(toSerialize)
 }

@@ -28,7 +28,7 @@ var (
 // ImagesAuditsApiService ImagesAuditsApi service
 type ImagesAuditsApiService service
 
-type ApiRetrieveImageAuditsListRequest struct {
+type ApiRetrieveImageAuditsList1Request struct {
 	ctx _context.Context
 	ApiService *ImagesAuditsApiService
 	xRequestId *string
@@ -44,70 +44,70 @@ type ApiRetrieveImageAuditsListRequest struct {
 }
 
 // [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-func (r ApiRetrieveImageAuditsListRequest) XRequestId(xRequestId string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveImageAuditsList1Request) XRequestId(xRequestId string) ApiRetrieveImageAuditsList1Request {
 	r.xRequestId = &xRequestId
 	return r
 }
 // Identifier to trace group of requests.
-func (r ApiRetrieveImageAuditsListRequest) XTraceId(xTraceId string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveImageAuditsList1Request) XTraceId(xTraceId string) ApiRetrieveImageAuditsList1Request {
 	r.xTraceId = &xTraceId
 	return r
 }
 // Number of page to be fetched.
-func (r ApiRetrieveImageAuditsListRequest) Page(page int64) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveImageAuditsList1Request) Page(page int64) ApiRetrieveImageAuditsList1Request {
 	r.page = &page
 	return r
 }
 // Number of elements per page.
-func (r ApiRetrieveImageAuditsListRequest) Size(size int64) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveImageAuditsList1Request) Size(size int64) ApiRetrieveImageAuditsList1Request {
 	r.size = &size
 	return r
 }
 // Specify fields and ordering (ASC for ascending, DESC for descending) in following format &#x60;field:ASC|DESC&#x60;.
-func (r ApiRetrieveImageAuditsListRequest) OrderBy(orderBy []string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveImageAuditsList1Request) OrderBy(orderBy []string) ApiRetrieveImageAuditsList1Request {
 	r.orderBy = &orderBy
 	return r
 }
 // The identifier of the image.
-func (r ApiRetrieveImageAuditsListRequest) ImageId(imageId string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveImageAuditsList1Request) ImageId(imageId string) ApiRetrieveImageAuditsList1Request {
 	r.imageId = &imageId
 	return r
 }
 // The requestId of the API call which led to the change.
-func (r ApiRetrieveImageAuditsListRequest) RequestId(requestId string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveImageAuditsList1Request) RequestId(requestId string) ApiRetrieveImageAuditsList1Request {
 	r.requestId = &requestId
 	return r
 }
 // UserId of the user which led to the change.
-func (r ApiRetrieveImageAuditsListRequest) ChangedBy(changedBy string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveImageAuditsList1Request) ChangedBy(changedBy string) ApiRetrieveImageAuditsList1Request {
 	r.changedBy = &changedBy
 	return r
 }
 // Start of search time range.
-func (r ApiRetrieveImageAuditsListRequest) StartDate(startDate string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveImageAuditsList1Request) StartDate(startDate string) ApiRetrieveImageAuditsList1Request {
 	r.startDate = &startDate
 	return r
 }
 // End of search time range.
-func (r ApiRetrieveImageAuditsListRequest) EndDate(endDate string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveImageAuditsList1Request) EndDate(endDate string) ApiRetrieveImageAuditsList1Request {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiRetrieveImageAuditsListRequest) Execute() (ImageAuditResponse, *_nethttp.Response, error) {
-	return r.ApiService.RetrieveImageAuditsListExecute(r)
+func (r ApiRetrieveImageAuditsList1Request) Execute() (ImageAuditResponse, *_nethttp.Response, error) {
+	return r.ApiService.RetrieveImageAuditsList1Execute(r)
 }
 
 /*
-RetrieveImageAuditsList List history about your custom images (audit)
+RetrieveImageAuditsList1 List history about your custom images (audit)
 
 List and filters the history about your custom images.
 
  @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiRetrieveImageAuditsListRequest
+ @return ApiRetrieveImageAuditsList1Request
 */
-func (a *ImagesAuditsApiService) RetrieveImageAuditsList(ctx _context.Context) ApiRetrieveImageAuditsListRequest {
-	return ApiRetrieveImageAuditsListRequest{
+func (a *ImagesAuditsApiService) RetrieveImageAuditsList1(ctx _context.Context) ApiRetrieveImageAuditsList1Request {
+	return ApiRetrieveImageAuditsList1Request{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -115,7 +115,7 @@ func (a *ImagesAuditsApiService) RetrieveImageAuditsList(ctx _context.Context) A
 
 // Execute executes the request
 //  @return ImageAuditResponse
-func (a *ImagesAuditsApiService) RetrieveImageAuditsListExecute(r ApiRetrieveImageAuditsListRequest) (ImageAuditResponse, *_nethttp.Response, error) {
+func (a *ImagesAuditsApiService) RetrieveImageAuditsList1Execute(r ApiRetrieveImageAuditsList1Request) (ImageAuditResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -125,7 +125,7 @@ func (a *ImagesAuditsApiService) RetrieveImageAuditsListExecute(r ApiRetrieveIma
 		localVarReturnValue  ImageAuditResponse
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImagesAuditsApiService.RetrieveImageAuditsList")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ImagesAuditsApiService.RetrieveImageAuditsList1")
 	if err != nil {
 		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
 	}

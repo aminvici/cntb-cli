@@ -1,0 +1,8 @@
+./create.go
+./delete.go
+./edit.go
+./get.go
+./history.go
+./list.go
+./update.go
+./vars.go

@@ -1,0 +1,9 @@
+./addInstanceToNetwork.go
+./create.go
+./delete.go
+./get.go
+./list.go
+./privateNetwork.go
+./removeInstanceFromNetwork.go
+./update.go
+./vars.go

@@ -27,7 +27,7 @@ type CreateUserRequest struct {
 	Enabled bool `json:"enabled"`
 	// Enable or disable two-factor authentication (2FA) via time based OTP.
 	Totp bool `json:"totp"`
-	// The locale of the user. This can be `de-DE`, `de`, `en-US`, `en`
+	// The locale of the user. This can be `de-DE`, `de`, `en-US`, `en`, `es-ES`, `es`, `pt-BR`, `pt`.
 	Locale string `json:"locale"`
 	// The roles as list of `roleId`s of the user.
 	Roles *[]int64 `json:"roles,omitempty"`

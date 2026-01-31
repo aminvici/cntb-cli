@@ -50,6 +50,18 @@ type APIClient struct {
 
 	// API Services
 
+	DNSApi *DNSApiService
+
+	DNSAuditsApi *DNSAuditsApiService
+
+	DomainsApi *DomainsApiService
+
+	DomainsAuditsApi *DomainsAuditsApiService
+
+	HandlesApi *HandlesApiService
+
+	HandlesAuditsApi *HandlesAuditsApiService
+
 	ImagesApi *ImagesApiService
 
 	ImagesAuditsApi *ImagesAuditsApiService
@@ -61,8 +73,6 @@ type APIClient struct {
 	InstancesApi *InstancesApiService
 
 	InstancesAuditsApi *InstancesAuditsApiService
-
-	InternalApi *InternalApiService
 
 	ObjectStoragesApi *ObjectStoragesApiService
 
@@ -119,13 +129,18 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
+	c.DNSApi = (*DNSApiService)(&c.common)
+	c.DNSAuditsApi = (*DNSAuditsApiService)(&c.common)
+	c.DomainsApi = (*DomainsApiService)(&c.common)
+	c.DomainsAuditsApi = (*DomainsAuditsApiService)(&c.common)
+	c.HandlesApi = (*HandlesApiService)(&c.common)
+	c.HandlesAuditsApi = (*HandlesAuditsApiService)(&c.common)
 	c.ImagesApi = (*ImagesApiService)(&c.common)
 	c.ImagesAuditsApi = (*ImagesAuditsApiService)(&c.common)
 	c.InstanceActionsApi = (*InstanceActionsApiService)(&c.common)
 	c.InstanceActionsAuditsApi = (*InstanceActionsAuditsApiService)(&c.common)
 	c.InstancesApi = (*InstancesApiService)(&c.common)
 	c.InstancesAuditsApi = (*InstancesAuditsApiService)(&c.common)
-	c.InternalApi = (*InternalApiService)(&c.common)
 	c.ObjectStoragesApi = (*ObjectStoragesApiService)(&c.common)
 	c.ObjectStoragesAuditsApi = (*ObjectStoragesAuditsApiService)(&c.common)
 	c.PrivateNetworksApi = (*PrivateNetworksApiService)(&c.common)

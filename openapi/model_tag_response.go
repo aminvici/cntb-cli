@@ -27,19 +27,22 @@ type TagResponse struct {
 	Name string `json:"name"`
 	// Tag's color
 	Color string `json:"color"`
+	// The description of the Tag
+	Description string `json:"description"`
 }
 
 // NewTagResponse instantiates a new TagResponse object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewTagResponse(tenantId string, customerId string, tagId int64, name string, color string) *TagResponse {
+func NewTagResponse(tenantId string, customerId string, tagId int64, name string, color string, description string) *TagResponse {
 	this := TagResponse{}
 	this.TenantId = tenantId
 	this.CustomerId = customerId
 	this.TagId = tagId
 	this.Name = name
 	this.Color = color
+	this.Description = description
 	return &this
 }
 
@@ -171,6 +174,30 @@ func (o *TagResponse) SetColor(v string) {
 	o.Color = v
 }
 
+// GetDescription returns the Description field value
+func (o *TagResponse) GetDescription() string {
+	if o == nil {
+		var ret string
+		return ret
+	}
+
+	return o.Description
+}
+
+// GetDescriptionOk returns a tuple with the Description field value
+// and a boolean to check if the value has been set.
+func (o *TagResponse) GetDescriptionOk() (*string, bool) {
+	if o == nil  {
+		return nil, false
+	}
+	return &o.Description, true
+}
+
+// SetDescription sets field value
+func (o *TagResponse) SetDescription(v string) {
+	o.Description = v
+}
+
 func (o TagResponse) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if true {
@@ -187,6 +214,9 @@ func (o TagResponse) MarshalJSON() ([]byte, error) {
 	}
 	if true {
 		toSerialize["color"] = o.Color
+	}
+	if true {
+		toSerialize["description"] = o.Description
 	}
 	return json.Marshal(toSerialize)
 }

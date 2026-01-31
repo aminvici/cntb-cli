@@ -1,0 +1,7 @@
+./history.go
+./rescue.go
+./restart.go
+./shutdown.go
+./start.go
+./stop.go
+./vars.go

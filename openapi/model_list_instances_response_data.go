@@ -73,13 +73,15 @@ type ListInstancesResponseData struct {
 	ProductName string `json:"productName"`
 	// Default user name created for login during (re-)installation with administrative privileges. Allowed values for Linux/BSD are `admin` (use sudo to apply administrative privileges like root) or `root`. Allowed values for Windows are `admin` (has administrative privileges like administrator) or `administrator`.
 	DefaultUser *string `json:"defaultUser,omitempty"`
+	// Application ID
+	ApplicationId string `json:"applicationId"`
 }
 
 // NewListInstancesResponseData instantiates a new ListInstancesResponseData object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewListInstancesResponseData(tenantId string, customerId string, additionalIps []AdditionalIp, name string, displayName string, instanceId int64, dataCenter string, region string, regionName string, productId string, imageId string, ipConfig IpConfig1, macAddress string, ramMb float32, cpuCores int64, osType string, diskMb float32, sshKeys []int64, createdDate time.Time, cancelDate string, status InstanceStatus, vHostId int64, vHostNumber int64, vHostName string, addOns []AddOnResponse, productType string, productName string) *ListInstancesResponseData {
+func NewListInstancesResponseData(tenantId string, customerId string, additionalIps []AdditionalIp, name string, displayName string, instanceId int64, dataCenter string, region string, regionName string, productId string, imageId string, ipConfig IpConfig1, macAddress string, ramMb float32, cpuCores int64, osType string, diskMb float32, sshKeys []int64, createdDate time.Time, cancelDate string, status InstanceStatus, vHostId int64, vHostNumber int64, vHostName string, addOns []AddOnResponse, productType string, productName string, applicationId string) *ListInstancesResponseData {
 	this := ListInstancesResponseData{}
 	this.TenantId = tenantId
 	this.CustomerId = customerId
@@ -108,6 +110,7 @@ func NewListInstancesResponseData(tenantId string, customerId string, additional
 	this.AddOns = addOns
 	this.ProductType = productType
 	this.ProductName = productName
+	this.ApplicationId = applicationId
 	return &this
 }
 
@@ -831,6 +834,30 @@ func (o *ListInstancesResponseData) SetDefaultUser(v string) {
 	o.DefaultUser = &v
 }
 
+// GetApplicationId returns the ApplicationId field value
+func (o *ListInstancesResponseData) GetApplicationId() string {
+	if o == nil {
+		var ret string
+		return ret
+	}
+
+	return o.ApplicationId
+}
+
+// GetApplicationIdOk returns a tuple with the ApplicationId field value
+// and a boolean to check if the value has been set.
+func (o *ListInstancesResponseData) GetApplicationIdOk() (*string, bool) {
+	if o == nil  {
+		return nil, false
+	}
+	return &o.ApplicationId, true
+}
+
+// SetApplicationId sets field value
+func (o *ListInstancesResponseData) SetApplicationId(v string) {
+	o.ApplicationId = v
+}
+
 func (o ListInstancesResponseData) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if true {
@@ -919,6 +946,9 @@ func (o ListInstancesResponseData) MarshalJSON() ([]byte, error) {
 	}
 	if o.DefaultUser != nil {
 		toSerialize["defaultUser"] = o.DefaultUser
+	}
+	if true {
+		toSerialize["applicationId"] = o.ApplicationId
 	}
 	return json.Marshal(toSerialize)
 }

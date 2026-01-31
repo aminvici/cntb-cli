@@ -1,0 +1,13 @@
+./create.go
+./delete.go
+./edit.go
+./generateSecret.go
+./get.go
+./history.go
+./list.go
+./regenerateStorageCredentials.go
+./resendEmailVerification.go
+./resetPassword.go
+./retrieveStorageCredentials.go
+./update.go
+./vars.go

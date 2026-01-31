@@ -1,0 +1,5 @@
+./jsonpath.go
+./parse.go
+./path.go
+./placeholder.go
+./selector.go

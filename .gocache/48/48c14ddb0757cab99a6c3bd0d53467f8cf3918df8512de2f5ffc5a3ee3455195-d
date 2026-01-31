@@ -1,0 +1,5 @@
+./customFunctions.go
+./getKeycloakId.go
+./getObjectStorageCredentials.go
+./handleErrors.go
+./handleResponse.go

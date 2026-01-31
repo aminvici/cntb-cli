@@ -1,0 +1,7 @@
+./evaluable.go
+./functions.go
+./gval.go
+./language.go
+./operator.go
+./parse.go
+./parser.go

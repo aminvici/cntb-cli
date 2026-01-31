@@ -4,13 +4,13 @@ All URIs are relative to *https://api.contabo.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RetrieveImageAuditsList**](ImagesAuditsApi.md#RetrieveImageAuditsList) | **Get** /v1/compute/images/audits | List history about your custom images (audit)
+[**RetrieveImageAuditsList1**](ImagesAuditsApi.md#RetrieveImageAuditsList1) | **Get** /v1/compute/images/audits | List history about your custom images (audit)
 
 
 
-## RetrieveImageAuditsList
+## RetrieveImageAuditsList1
 
-> ImageAuditResponse RetrieveImageAuditsList(ctx).XRequestId(xRequestId).XTraceId(xTraceId).Page(page).Size(size).OrderBy(orderBy).ImageId(imageId).RequestId(requestId).ChangedBy(changedBy).StartDate(startDate).EndDate(endDate).Execute()
+> ImageAuditResponse RetrieveImageAuditsList1(ctx).XRequestId(xRequestId).XTraceId(xTraceId).Page(page).Size(size).OrderBy(orderBy).ImageId(imageId).RequestId(requestId).ChangedBy(changedBy).StartDate(startDate).EndDate(endDate).Execute()
 
 List history about your custom images (audit)
 
@@ -43,13 +43,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.ImagesAuditsApi.RetrieveImageAuditsList(context.Background()).XRequestId(xRequestId).XTraceId(xTraceId).Page(page).Size(size).OrderBy(orderBy).ImageId(imageId).RequestId(requestId).ChangedBy(changedBy).StartDate(startDate).EndDate(endDate).Execute()
+    resp, r, err := api_client.ImagesAuditsApi.RetrieveImageAuditsList1(context.Background()).XRequestId(xRequestId).XTraceId(xTraceId).Page(page).Size(size).OrderBy(orderBy).ImageId(imageId).RequestId(requestId).ChangedBy(changedBy).StartDate(startDate).EndDate(endDate).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ImagesAuditsApi.RetrieveImageAuditsList``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `ImagesAuditsApi.RetrieveImageAuditsList1``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `RetrieveImageAuditsList`: ImageAuditResponse
-    fmt.Fprintf(os.Stdout, "Response from `ImagesAuditsApi.RetrieveImageAuditsList`: %v\n", resp)
+    // response from `RetrieveImageAuditsList1`: ImageAuditResponse
+    fmt.Fprintf(os.Stdout, "Response from `ImagesAuditsApi.RetrieveImageAuditsList1`: %v\n", resp)
 }
 ```
 
@@ -59,7 +59,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiRetrieveImageAuditsListRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiRetrieveImageAuditsList1Request struct via the builder pattern
 
 
 Name | Type | Description  | Notes
