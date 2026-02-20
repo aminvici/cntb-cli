@@ -2097,7 +2097,7 @@ paths:
   /v1/dns/zones/audits:
     get:
       description: List and filters the history about your DNS Zones .
-      operationId: retrieveImageAuditsList
+      operationId: retrieveDnsAuditsList
       parameters:
       - description: '[Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random))
           to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4)
@@ -7446,7 +7446,7 @@ paths:
   /v1/compute/images/audits:
     get:
       description: List and filters the history about your custom images.
-      operationId: retrieveImageAuditsList1
+      operationId: retrieveImageAuditsList
       parameters:
       - description: '[Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random))
           to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4)
@@ -8198,7 +8198,6 @@ paths:
           - transferring out
           - manual_task
           - transferred
-          - deleted
           example: ready
           type: string
         style: form
@@ -10699,9 +10698,16 @@ components:
           minLength: 1
           type: string
         type:
-          description: Type
+          description: DNS record type
+          enum:
+          - A
+          - AAAA
+          - CAA
+          - CNAME
+          - MX
+          - SRV
+          - TXT
           example: A
-          minLength: 1
           type: string
         ttl:
           description: TTL
@@ -19563,7 +19569,6 @@ components:
           - transferring out
           - manual_task
           - transferred
-          - deleted
           example: ready
           type: string
         nameservers:
@@ -20092,7 +20097,6 @@ components:
           - transferring out
           - manual_task
           - transferred
-          - deleted
           example: ready
           type: string
         nameservers:

@@ -19,7 +19,7 @@ import (
 type CreateDnsZoneRecordRequest struct {
 	// Name, if empty the zone name will be used
 	Name *string `json:"name,omitempty"`
-	// Type
+	// DNS record type
 	Type string `json:"type"`
 	// TTL
 	Ttl float32 `json:"ttl"`

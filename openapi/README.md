@@ -323,7 +323,7 @@ Class | Method | HTTP request | Description
 *DNSApi* | [**RetrievePtrRecordsList**](docs/DNSApi.md#retrieveptrrecordslist) | **Get** /v1/dns/ptrs | List PTR records
 *DNSApi* | [**UpdateDnsZoneRecord**](docs/DNSApi.md#updatednszonerecord) | **Patch** /v1/dns/zones/{zoneName}/records/{recordId} | Update DNS zone record
 *DNSApi* | [**UpdatePtrRecord**](docs/DNSApi.md#updateptrrecord) | **Put** /v1/dns/ptrs/{ipAddress} | Edit a PTR Record by ip address
-*DNSAuditsApi* | [**RetrieveImageAuditsList**](docs/DNSAuditsApi.md#retrieveimageauditslist) | **Get** /v1/dns/zones/audits | List history about your DNS Zones (audit)
+*DNSAuditsApi* | [**RetrieveDnsAuditsList**](docs/DNSAuditsApi.md#retrievednsauditslist) | **Get** /v1/dns/zones/audits | List history about your DNS Zones (audit)
 *DNSAuditsApi* | [**RetrieveRecordAuditsList**](docs/DNSAuditsApi.md#retrieverecordauditslist) | **Get** /v1/dns/records/audits | List history about your DNS Records (audit)
 *DomainsApi* | [**CancelDomain**](docs/DomainsApi.md#canceldomain) | **Post** /v1/domains/{domain}/cancel | Cancel a specific domain
 *DomainsApi* | [**ConfirmDomainTransferOut**](docs/DomainsApi.md#confirmdomaintransferout) | **Post** /v1/domains/{domain}/transfer-out | Confirm transfer out for a domain
@@ -351,7 +351,7 @@ Class | Method | HTTP request | Description
 *ImagesApi* | [**RetrieveImage**](docs/ImagesApi.md#retrieveimage) | **Get** /v1/compute/images/{imageId} | Get details about a specific image by its id
 *ImagesApi* | [**RetrieveImageList**](docs/ImagesApi.md#retrieveimagelist) | **Get** /v1/compute/images | List available standard and custom images
 *ImagesApi* | [**UpdateImage**](docs/ImagesApi.md#updateimage) | **Patch** /v1/compute/images/{imageId} | Update custom image name by its id
-*ImagesAuditsApi* | [**RetrieveImageAuditsList1**](docs/ImagesAuditsApi.md#retrieveimageauditslist1) | **Get** /v1/compute/images/audits | List history about your custom images (audit)
+*ImagesAuditsApi* | [**RetrieveImageAuditsList**](docs/ImagesAuditsApi.md#retrieveimageauditslist) | **Get** /v1/compute/images/audits | List history about your custom images (audit)
 *InstanceActionsApi* | [**Rescue**](docs/InstanceActionsApi.md#rescue) | **Post** /v1/compute/instances/{instanceId}/actions/rescue | Rescue a compute instance / resource identified by its id
 *InstanceActionsApi* | [**ResetPasswordAction**](docs/InstanceActionsApi.md#resetpasswordaction) | **Post** /v1/compute/instances/{instanceId}/actions/resetPassword | Reset password for a compute instance / resource referenced by an id
 *InstanceActionsApi* | [**Restart**](docs/InstanceActionsApi.md#restart) | **Post** /v1/compute/instances/{instanceId}/actions/restart | Restart a compute instance / resource identified by its id.

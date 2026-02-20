@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | Pointer to **string** | Name, if empty the zone name will be used | [optional] 
-**Type** | **string** | Type | 
+**Type** | **string** | DNS record type | 
 **Ttl** | **float32** | TTL | 
 **Prio** | **float32** | Prio | 
 **Data** | **string** | Data | 

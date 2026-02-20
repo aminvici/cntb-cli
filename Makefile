@@ -11,7 +11,7 @@ endif
 # 	OPENAPIVOLUME = "$(CURDIR):/local"
 # endif
 ifndef OPENAPIIMAGE
-	OPENAPIIMAGE = "openapitools/openapi-generator-cli:v5.2.1"
+	OPENAPIIMAGE = "openapitools/openapi-generator-cli:latest"
 endif
 .PHONY: build
 build: generate-api-clients build-only
@@ -43,8 +43,12 @@ bats: build bats-only
 
 .PHONY: bats-only
 bats-only:
-	rm -f ~/.cache/cntb/token
-	bats -rt --timing  bats/*.bats
+	if ls bats/*.bats >/dev/null 2>&1; then \
+		rm -f ~/.cache/cntb/token; \
+		bats -rt --timing bats/*.bats; \
+	else \
+		echo "No bats tests found — skipping"; \
+	fi
 
 .PHONY: install
 install: bats
@@ -52,7 +56,7 @@ install: bats
 
 .PHONY: release
 release: build
-	go get github.com/mitchellh/gox
+	go install github.com/mitchellh/gox@latest
 	mkdir -p dist/
 	rm -rf dist/*
 	export VERSION=$$(git rev-list --tags --max-count=1 | xargs -I {} git describe --tags {}); export COMMIT=$$(git rev-parse HEAD); export TIMESTAMP=$$(date -u +"%Y-%m-%dT%H:%M:%SZ"); gox -osarch="darwin/amd64 linux/amd64 linux/arm64 windows/amd64 darwin/arm64" -ldflags="-w -s -X \"contabo.com/cli/cntb/cmd.version=$$VERSION\" -X \"contabo.com/cli/cntb/cmd.commit=$$COMMIT\" -X \"contabo.com/cli/cntb/cmd.date=$$TIMESTAMP\"" -output="dist/{{.OS}}_{{.Arch}}/{{.Dir}}"

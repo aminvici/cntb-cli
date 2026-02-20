@@ -28,7 +28,7 @@ var (
 // DNSAuditsApiService DNSAuditsApi service
 type DNSAuditsApiService service
 
-type ApiRetrieveImageAuditsListRequest struct {
+type ApiRetrieveDnsAuditsListRequest struct {
 	ctx _context.Context
 	ApiService *DNSAuditsApiService
 	xRequestId *string
@@ -44,70 +44,70 @@ type ApiRetrieveImageAuditsListRequest struct {
 }
 
 // [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-func (r ApiRetrieveImageAuditsListRequest) XRequestId(xRequestId string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveDnsAuditsListRequest) XRequestId(xRequestId string) ApiRetrieveDnsAuditsListRequest {
 	r.xRequestId = &xRequestId
 	return r
 }
 // Identifier to trace group of requests.
-func (r ApiRetrieveImageAuditsListRequest) XTraceId(xTraceId string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveDnsAuditsListRequest) XTraceId(xTraceId string) ApiRetrieveDnsAuditsListRequest {
 	r.xTraceId = &xTraceId
 	return r
 }
 // Number of page to be fetched.
-func (r ApiRetrieveImageAuditsListRequest) Page(page int64) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveDnsAuditsListRequest) Page(page int64) ApiRetrieveDnsAuditsListRequest {
 	r.page = &page
 	return r
 }
 // Number of elements per page.
-func (r ApiRetrieveImageAuditsListRequest) Size(size int64) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveDnsAuditsListRequest) Size(size int64) ApiRetrieveDnsAuditsListRequest {
 	r.size = &size
 	return r
 }
 // Specify fields and ordering (ASC for ascending, DESC for descending) in following format &#x60;field:ASC|DESC&#x60;.
-func (r ApiRetrieveImageAuditsListRequest) OrderBy(orderBy []string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveDnsAuditsListRequest) OrderBy(orderBy []string) ApiRetrieveDnsAuditsListRequest {
 	r.orderBy = &orderBy
 	return r
 }
 // Dns Zone name.
-func (r ApiRetrieveImageAuditsListRequest) Name(name string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveDnsAuditsListRequest) Name(name string) ApiRetrieveDnsAuditsListRequest {
 	r.name = &name
 	return r
 }
 // The requestId of the API call which led to the change.
-func (r ApiRetrieveImageAuditsListRequest) RequestId(requestId string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveDnsAuditsListRequest) RequestId(requestId string) ApiRetrieveDnsAuditsListRequest {
 	r.requestId = &requestId
 	return r
 }
 // UserId of the user which led to the change.
-func (r ApiRetrieveImageAuditsListRequest) ChangedBy(changedBy string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveDnsAuditsListRequest) ChangedBy(changedBy string) ApiRetrieveDnsAuditsListRequest {
 	r.changedBy = &changedBy
 	return r
 }
 // Start of search time range.
-func (r ApiRetrieveImageAuditsListRequest) StartDate(startDate string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveDnsAuditsListRequest) StartDate(startDate string) ApiRetrieveDnsAuditsListRequest {
 	r.startDate = &startDate
 	return r
 }
 // End of search time range.
-func (r ApiRetrieveImageAuditsListRequest) EndDate(endDate string) ApiRetrieveImageAuditsListRequest {
+func (r ApiRetrieveDnsAuditsListRequest) EndDate(endDate string) ApiRetrieveDnsAuditsListRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiRetrieveImageAuditsListRequest) Execute() (ZoneAuditResponse, *_nethttp.Response, error) {
-	return r.ApiService.RetrieveImageAuditsListExecute(r)
+func (r ApiRetrieveDnsAuditsListRequest) Execute() (ZoneAuditResponse, *_nethttp.Response, error) {
+	return r.ApiService.RetrieveDnsAuditsListExecute(r)
 }
 
 /*
-RetrieveImageAuditsList List history about your DNS Zones (audit)
+RetrieveDnsAuditsList List history about your DNS Zones (audit)
 
 List and filters the history about your DNS Zones .
 
  @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiRetrieveImageAuditsListRequest
+ @return ApiRetrieveDnsAuditsListRequest
 */
-func (a *DNSAuditsApiService) RetrieveImageAuditsList(ctx _context.Context) ApiRetrieveImageAuditsListRequest {
-	return ApiRetrieveImageAuditsListRequest{
+func (a *DNSAuditsApiService) RetrieveDnsAuditsList(ctx _context.Context) ApiRetrieveDnsAuditsListRequest {
+	return ApiRetrieveDnsAuditsListRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -115,7 +115,7 @@ func (a *DNSAuditsApiService) RetrieveImageAuditsList(ctx _context.Context) ApiR
 
 // Execute executes the request
 //  @return ZoneAuditResponse
-func (a *DNSAuditsApiService) RetrieveImageAuditsListExecute(r ApiRetrieveImageAuditsListRequest) (ZoneAuditResponse, *_nethttp.Response, error) {
+func (a *DNSAuditsApiService) RetrieveDnsAuditsListExecute(r ApiRetrieveDnsAuditsListRequest) (ZoneAuditResponse, *_nethttp.Response, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -125,7 +125,7 @@ func (a *DNSAuditsApiService) RetrieveImageAuditsListExecute(r ApiRetrieveImageA
 		localVarReturnValue  ZoneAuditResponse
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DNSAuditsApiService.RetrieveImageAuditsList")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DNSAuditsApiService.RetrieveDnsAuditsList")
 	if err != nil {
 		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
 	}
